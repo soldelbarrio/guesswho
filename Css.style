@@ -1,0 +1,42 @@
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Grid container for portraits */
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 portraits per row */
+    gap: 20px; /* Spacing between portraits */
+}
+
+/* Styling for each portrait box */
+.portrait {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* For adding a slight zoom effect on click if needed */
+}
+
+.portrait img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: filter 0.3s ease; /* Smooth transition for grayscale effect */
+}
+
+/* When portrait is flipped (grayscaled) */
+.portrait.grayscale img {
+    filter: grayscale(100%);
+}
+
+/* Name styling under each portrait */
+.portrait p {
+    margin-top: 10px;
+    font-weight: bold;
+}
